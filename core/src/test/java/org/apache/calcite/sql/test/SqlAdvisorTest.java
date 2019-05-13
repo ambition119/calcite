@@ -228,7 +228,8 @@ public class SqlAdvisorTest extends SqlValidatorTestCase {
           "KEYWORD(USER)",
           "KEYWORD(VAR_POP)",
           "KEYWORD(VAR_SAMP)",
-          "KEYWORD(YEAR)");
+          "KEYWORD(YEAR)",
+          "KEYWORD(REPEAT)");
 
   protected static final List<String> QUANTIFIERS =
       Arrays.asList(

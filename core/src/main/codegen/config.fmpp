@@ -224,6 +224,7 @@ data: {
         "QUARTER"
         "READ"
         "RELATIVE"
+        "REPEAT"
         "REPEATABLE"
         "REPLACE"
         "RESPECT"

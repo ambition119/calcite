@@ -4264,6 +4264,16 @@ public abstract class SqlOperatorBaseTest {
     tester.checkNull("upper(cast(null as varchar(1)))");
   }
 
+  @Test public void testRepeatFunc() {
+    tester.setFor(SqlStdOperatorTable.REPEAT);
+    tester.checkString("repeat('', 0)", "", "VARCHAR(2000) NOT NULL");
+    tester.checkString("repeat('', 2)", "", "VARCHAR(2000) NOT NULL");
+    tester.checkString("repeat('a', 3)", "aaa", "VARCHAR(2000) NOT NULL");
+    tester.checkString("repeat('ab', 2)", "abab", "VARCHAR(2000) NOT NULL");
+    tester.checkString("repeat('a', -2)", "", "VARCHAR(2000) NOT NULL");
+    tester.checkString("repeat(cast(null as varchar(2000)), 2)", null, "VARCHAR(2000)");
+  }
+
   @Test public void testJsonExists() {
     tester.checkBoolean("json_exists('{\"foo\":\"bar\"}', "
         + "'strict $.foo' false on error)", Boolean.TRUE);

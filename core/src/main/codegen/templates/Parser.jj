@@ -6599,6 +6599,7 @@ SqlPostfixOperator PostfixRowOperator() :
 |   < REGR_SYY: "REGR_SYY" >
 |   < RELATIVE: "RELATIVE" >
 |   < RELEASE: "RELEASE" >
+|   < REPEAT: "REPEAT" >
 |   < REPEATABLE: "REPEATABLE" >
 |   < REPLACE: "REPLACE" >
 |   < RESET: "RESET" >

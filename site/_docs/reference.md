@@ -1483,13 +1483,12 @@ period:
 | {fn UCASE(string)} | Returns a string in which all alphabetic characters in *string* have been converted to upper case
 | {fn REPLACE(string, search, replacement)} | Returns a string in which all the occurrences of *search* in *string* are replaced with *replacement*; if *replacement* is the empty string, the occurrences of *search* are removed
 | {fn ASCII(string)} | Returns the corresponding ASCII code of the first character of *string*; Returns 0 if *string* is empty; Returns NULL if *string* is NULL; Returns the Unicode code point for non-ASCII character
-
+| {fn REPEAT(string, integer)} | Returns a new string with a string value of str and a number of repetitions of N. If the argument is null, it returns null. If the number of repetitions is 0 or negative, an empty string is returned
 Not implemented:
 
 * {fn CHAR(string)}
 * {fn DIFFERENCE(string, string)}
 * {fn LEFT(string, integer)}
-* {fn REPEAT(string, integer)}
 * {fn RIGHT(string, integer)}
 * {fn SOUNDEX(string)}
 * {fn SPACE(integer)}

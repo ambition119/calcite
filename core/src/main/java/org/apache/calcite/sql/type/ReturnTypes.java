@@ -287,6 +287,14 @@ public abstract class ReturnTypes {
    */
   public static final SqlReturnTypeInference VARCHAR_2000 =
       explicit(SqlTypeName.VARCHAR, 2000);
+
+  /**
+   * Type-inference strategy whereby the result type of a call is an VARCHAR
+   * with nulls allowed if any of the operands allow nulls.
+   */
+  public static final SqlReturnTypeInference VARCHAR_2000_NULLABLE =
+      cascade(VARCHAR_2000, SqlTypeTransforms.TO_NULLABLE);
+
   /**
    * Type-inference strategy for Histogram agg support
    */

@@ -1501,6 +1501,15 @@ public class SqlStdOperatorTable extends ReflectiveSqlOperatorTable {
           OperandTypes.CHARACTER,
           SqlFunctionCategory.STRING);
 
+  public static final SqlFunction REPEAT =
+      new SqlFunction(
+          "REPEAT",
+          SqlKind.OTHER_FUNCTION,
+          ReturnTypes.VARCHAR_2000_NULLABLE,
+          null,
+          OperandTypes.STRING_INTEGER,
+          SqlFunctionCategory.STRING);
+
   /**
    * Uses SqlOperatorTable.useDouble for its return type since we don't know
    * what the result type will be by just looking at the operand types. For
